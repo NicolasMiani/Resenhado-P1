@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Primeiro Projeto</title>
+<style>
+* {box-sizing: border-box}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: rgb(128, 212, 233);
+  text-align: center;
+  color:rgb(255, 144, 218); 
+  text-shadow: 2px 2px 3px #353535;
+  font-size: 30px;
+}
+
+.rev {
+  background-color: antiquewhite;
+  color: black;
+  text-shadow: none;
+  box-shadow: 5px 10px 1px #175c68;
+  border-style:dashed;
+}
+
+
+.mySlides {display: none};
+  img {vertical-align: middle;
+  max-width: 150px;
+  max-height: 300px;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  padding: 0;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor:pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 0;
+  margin-top: -22px;
+  color: rgb(255, 144, 218);
+  font-weight: bold;
+  font-size: 25px;
+  transition: 0.2s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  text-shadow: 1px 1px 2px  #353535;
+}
+
+/* Position the "next button" to the right */
+
+.prev {
+  position:absolute;
+  left: 550px;
+  top: 200px;
+  border-radius: 3px 0 0 3px;
+}
+
+.next {
+  position: absolute;
+  right: 550px;
+  top: 200px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  text-shadow:2px 2px 5px #8511c9;
+}
+
+/* Caption text */
+.text {
+  color: rgb(255, 144, 218);
+  font-size: 20px;
+  padding: 0;
+  position: 0;
+  font-family: cursive;
+  text-shadow: 1px 1px 2px #353535;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: rgb(255, 144, 218);
+  font-stretch: extra-condensed;
+  text-shadow: 1px 1px 2px #353535;
+  font-size: 20px;
+  padding: 0;
+  position: 0;
+  top: 0;
+  font-family:cursive;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  background-color: rgb(0, 109, 64);
+  border-radius: 35%;
+  display:inline-block;
+  transition: background-color 0.2s ease;
+  position: 0;
+}
+
+.active, .dot:hover {
+  background-color: #00c954;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from {opacity: 80%} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+  <h1 style="background-color: rgb(132, 235, 192);
+    margin-top: 0;
+    padding: 20px;
+    box-shadow: 2px 2px 3px #353535;
+    border-style:dashed;
+    border-color: rgb(153, 108, 153);
+  ">Resenhado</h1>
+
+<div class="slideshow-container">
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div>
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+    <span class="dot" onclick="currentSlide(5)"></span> 
+  </div>
+
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="public/img/1984.jpg" onclick="myfunction1()" style="max-width: 180px; box-shadow: 4px 4px 3px #175c68;">
+  <div class="text">1984</div>
+  <div id="rev1" hidden class="rev">
+    <p>1984 is a dystopian novella by George Orwell published in 1949, which follows the life of Winston Smith, a low ranking member of ‘the Party’, who is frustrated by the omnipresent eyes of the party, and its ominous ruler Big Brother.
+  
+      ‘Big Brother’ controls every aspect of people’s lives. It has invented the language ‘Newspeak’ in an attempt to completely eliminate political rebellion; created ‘Throughtcrimes’ to stop people even thinking of things considered rebellious. The party controls what people read, speak, say and do with the threat that if they disobey, they will be sent to the dreaded Room 101 as a looming punishment.
+      
+      Orwell effectively explores the themes of mass media control, government surveillance, totalitarianism and how a dictator can manipulate and control history, thoughts, and lives in such a way that no one can escape it.
+      
+      1984
+      The protagonist, Winston Smith, begins a subtle rebellion against the party by keeping a diary of his secret thoughts, which is a deadly thoughtcrime. With his lover Julia, he begins a foreordained fight for freedom and justice, in a world where no one else appears to see, or dislike, the oppression the protagonist opposes.
+      
+      Perhaps the most powerful, effective and frightening notion of 1984 is that the complete control of an entire nation under a totalitarian state is perfectly possible. If the world fell under the control of one or even multiple dictators, the future could easily become a twisted, cruel world where every movement, word and breath is scrutinised by an omnipotent, omnipresent power that no one can stop, or even oppose without the fear of death.
+      
+      How do I get involved in the Guardian children's books site?
+      Read more
+      Orwell’s novella is a warning for the human race. It highlights the importance of resisting mass control and oppression.</p>
+  </div>
+</div>
+
+<div class="mySlides fade" >
+  <div class="numbertext">2 / 5</div>
+  <img src="public/img/divcom.jpg" onclick="myfunction2()" style="max-width: 180px; box-shadow: 4px 4px 3px #175c68" >
+  <div class="text">The Divine Comedy</div>
+  <div id="rev2" hidden class="rev">
+    <p>This single volume, blank verse translation of The Divine Comedy includes an introduction, maps of Dante’s Italy, Hell, Purgatory, Geocentric Universe, and political panorama of the thirteenth and early fourteenth century, diagrams and notes providing the reader with invaluable guidance. Described as the “fifth gospel” because of its evangelical purpose, this spiritual autobiography creates a world in which reason and faith have transformed moral and social chaos into order. It is one of the most important works in the literature of Western Europe and is considered the greatest poem of the European Middle Ages.
+
+      I feel like I should preface this by saying that I am a huge nerd who is far too interested in medieval and early modern religion so there’s a good chance I’ll go on a tangent about that at some point.
+      
+      Divina Commedia first edThe Divine Comedy is a long narrative poem which explores Hell, Purgatory, and Heaven from the perspective of the author, Dante. It’s actually a first-person narrative where Dante imagines his own journey to salvation.
+      
+      The poem begins on the night of Maundy Thursday in 1300 and Dante is thirty-five years old, which is half of the biblical lifespan of 70. He’s lost in a dark wood trying to find the right path to salvation. The dark wood is an allegory for sin and salvation is symbolised by the sun behind the mountain. Dante is eventually rescued by Virgil, an ancient Roman poet, who guides him into the underworld. Dante was inspired by Virgil’s Aeneid, which I’d highly recommend reading, and I love that Virgil acts as his guide through hell.
+      
+      The Inferno represents the Christian soul seeing sin for what it really is. Each of the nine circles of Hell represents different sins, from the unbaptized and ‘worthy pagans’ who reside in the first level to the traitors who reside in the pit of Cocytus. I love that gossips or ‘scandalmongers’ are considered worse, and therefore reside closer to Satan, than those who commit violent crimes against other humans or themselves. There’s nothing worse than a gossiper, except traitors and Satan.
+      
+      Purgatorio represents the repentant Christian life and, in this middle section of the poem, Dante climbs up the Mount of Purgatory. This isn’t limbo, limbo is the first circle of Hell, and Purgatory was sometimes considered as a physical plane between Hell and Heaven. There are seven terraces of Purgatory which correspond with the seven deadly sins. Dante makes a distinction here between the actions of humans which land them in hell and the motivations of sin (aka, the seven deadly sins). Purgatory is about temptation, not action. It’s so interesting.
+      
+      Dante and Beatrice speak to Piccarda and ConstanceParadiso, the final section of the poem, represents the soul’s ascension to God and it is depicted as concentric spheres surrounding the Earth. I really enjoyed Paradiso, mainly because Dante and Beatrice meet so many people that Dante clearly admired, but I also loved how Dante represented the planets and other astronomical objects. For example, within the Sun Dante meets the souls of people he thought illuminated the world intellectually. Y’know, because the Sun illuminates the Earth. So, he met the likes of Thomas Aquinas, King Solomon, Bede, and Orosius. They’re all famous figures religious figures, the majority of them are Catholic (since Protestantism didn’t exist yet), which makes sense since this poem is one giant religious allegory.
+      
+      Inferno will always be my favourite section of the poem but I really loved Paradisio. I hadn’t read it before but I loved the imagery that Dante used and I just enjoyed reading it. One of my favourite sections of the poem actually comes from canto XXVII (27) of Paradisio:
+      
+      And this heaven has no other location
+      Than the divine mind, in which is lit up
+      The love which turns it and the power it rains down.
+      
+      Light and love contain it in one circle,
+      As it contains the others; and this surround
+      Is understood only by him who is round about it.
+      
+      Divider
+      
+      There are a few things I liked about this specific edition. Firstly, it’s an all-in-one volume which means that I didn’t have to buy three separate books for the different sections. It does make the book difficult to travel with but I really liked that the Inferno wasn’t separated from its subsequent sections.
+      
+      Dante gazes at Mount PurgatorySecondly, I really liked the translation in this edition even though it switches the verse structure. Divina Commedia was originally in terza rima, which is a rhyming verse stanza form that consists of an interlocking three-line rhyme scheme. Dante was actually the first one to use it. The poem was also hendecasyllabic (lines of eleven syllables) which is a throwback to the structure of Ancient Greek and Latin poetry. However, this edition is in blank verse because that’s better suited to the English language. I’d love to read a translation that stuck to Dante’s original structure, especially as terza rima was fairly common in English Renaissance and English Romantic poetry, but this particular edition makes the poem feel more natural to a native English speaker.
+      
+      Finally, I loved that it included maps, illustrations/diagrams, and a timeline. At the front of the book, before the actual poem but after the rather useful introduction, there’s a series of timelines, maps, and other illustrations. One of these is a diagram on Dante’s Hell, which explains the different sections and shows Satan at the centre of the Earth. There are corresponding diagrams for both Purgatory and Paradise later in the book. I loved these, and they’re probably in other editions too, but I’m a sucker for maps and illustrations in classic books.</p>
+  </div>
+</div>
+
+<div class="mySlides fade" >
+  <div class="numbertext">3 / 5</div>
+  <img src="public/img/lotr.jpg" onclick="myfunction3()" style="max-width: 180px; box-shadow: 4px 4px 3px #175c68">
+  <div class="text">The Lord of the Rings</div>
+  <div id="rev3" hidden class="rev">
+    <p>Sauron, the Dark Lord, has gathered to him all the Rings of Power, the means by which he intends to rule Middle-earth. All he lacks in his plans for dominion is the One Ring, the ring that rules them all, which has fallen into the hands of the hobbit, Bilbo Baggins. In a sleepy village in the Shire, young Frodo Baggins finds himself faced with an immense task, as his elderly cousin Bilbo entrusts the Ring to his care. Frodo must leave his home and make a perilous journey across Middle-earth to the Cracks of Doom, there to destroy the Ring and foil the Dark Lord in his evil purpose.
+
+      Since it was first published in 1954, The Lord of the Rings has been a book people have treasured. Steeped in unrivalled magic and otherworldliness, its sweeping fantasy has touched the hearts of young and old alike. Written by Professor J.R.R. Tolkien and consisting of three separate books (The Fellowship of the Ring, The Two Towers and The Return of the King) The Lord of the Rings was first published by George, Allen and Unwin between 1954 and 1955.
+      
+      And a magnificent achievement it is; an epic tale of friendship, love and heroism, a book that set the benchmark for all fantasy novels to come. Tolkien's descriptive narrative beautifully depicts Middle-earth and the journey that the Fellowship undertakes will remain with them for the rest of their lives.
+      
+      It is hard to put into words the happiness that can be felt when reading a fantasy book as good as this and anybody who has never read it should set aside some time to do so. Is it the best fantasy book of all time? In my opinion, yes.
+      
+      There's no salvation for a fantasy fan who hasn't read the gospel of the genre. The influence of The Lord of the Rings is so universal that everybody from George Lucas to Led Zeppelin has appropriated it for one purpose or another. Not just revolutionary because it was groundbreaking, The Lord of the Rings is timeless because it's the product of a truly top-shelf mind. Tolkien was a distinguished linguist and Oxford scholar of dead languages with strong ideas about the importance of myth and story and a deep appreciation of nature. His epic, 10 years in the making, recounts the Great War of the Ring and the closing of Middle-Earth's Third Age, a time when magic begins to fade from the world and men rise to dominance. Tolkien carefully details this transition with tremendous skill and love, creating in The Lord of the Rings a universal and all-embracing tale, a justly celebrated classic.</p>
+  </div>
+</div>
+
+<div class="mySlides fade" >
+  <div class="numbertext">4 / 5</div>
+  <img src="public/img/maus.jpg" onclick="myfunction4()" style="max-width: 180px; box-shadow: 4px 4px 3px #175c68">
+  <div class="text">Maus</div>
+  <div id="rev4" hidden class="rev">
+    <p>The first installment of the Pulitzer Prize-winning graphic novel acclaimed as “the most affecting and successful narrative ever done about the Holocaust” (Wall Street Journal) and “the first masterpiece in comic book history” (The New Yorker).
+
+      A brutally moving work of art—widely hailed as the greatest graphic novel ever written—Maus recounts the chilling experiences of the author’s father during the Holocaust, with Jews drawn as wide-eyed mice and Nazis as menacing cats.
+      
+      Maus is a haunting tale within a tale, weaving the author’s account of his tortured relationship with his aging father into an astonishing retelling of one of history's most unspeakable tragedies. It is an unforgettable story of survival and a disarming look at the legacy of trauma.</p>
+  </div>
+</div>
+
+<div class="mySlides fade" >
+  <div class="numbertext">5 / 5</div>
+  <img src="public/img/norwo.jpg" onclick="myfunction5()" style="max-width: 180px; box-shadow: 4px 4px 3px #175c68">
+  <div class="text">Norwegian Wood</div>
+  <div id="rev5" hidden class="rev">
+    <p>Toru, a quiet and preternaturally serious young college student in Tokyo, is devoted to Naoko, a beautiful and introspective young woman, but their mutual passion is marked by the tragic death of their best friend years before. Toru begins to adapt to campus life and the loneliness and isolation he faces there, but Naoko finds the pressures and responsibilities of life unbearable. As she retreats further into her own world, Toru finds himself reaching out to others and drawn to a fiercely independent and sexually liberated young woman.
+
+      A magnificent blending of the music, the mood, and the ethos that was the sixties with the story of one college student's romantic coming of age, Norwegian Wood brilliantly recaptures a young man's first, hopeless, and heroic love.</p>
+  </div>
+  
+</div>
+
+
+</div>
+<br>
+
+
+<script>
+
+function myfunction1() {
+  var x = document.getElementById("rev1");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+function myfunction2() {
+  var x = document.getElementById("rev2");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+function myfunction3() {
+  var x = document.getElementById("rev3");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+function myfunction4() {
+  var x = document.getElementById("rev4");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+function myfunction5() {
+  var x = document.getElementById("rev5");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
